@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            style="@style/Sis.Tile"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_logo"
+            android:contentDescription="Back"
+            android:src="@drawable/ic_arrow_back"
+            app:tint="@color/text_dark" />
+
+        <TextView
+            style="@style/Sis.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Join the portal." />
+
+        <TextView
+            style="@style/Sis.Subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Register to access your student record." />
+
+        <LinearLayout
+            style="@style/Sis.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp">
+
+            <TextView
+                style="@style/Sis.CardTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Account" />
+
+            <TextView
+                style="@style/Sis.FieldLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Username" />
+
+            <EditText
+                android:id="@+id/etUsername"
+                style="@style/Sis.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:hint="Choose a username"
+                android:importantForAutofill="no"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/errUsername"
+                style="@style/Sis.Error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                style="@style/Sis.FieldLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Password" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/etPassword"
+                    style="@style/Sis.EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:hint="At least 8 characters"
+                    android:importantForAutofill="no"
+                    android:inputType="textPassword"
+                    android:paddingEnd="64dp" />
+
+                <ImageButton
+                    android:id="@+id/btnTogglePassword"
+                    style="@style/Sis.Tile"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginEnd="7dp"
+                    android:background="@drawable/bg_eye"
+                    android:contentDescription="Show or hide password"
+                    android:elevation="3dp"
+                    android:src="@drawable/ic_eye_off"
+                    app:tint="@color/text_gray" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/errPassword"
+                style="@style/Sis.Error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                style="@style/Sis.FieldLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Confirm password" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/etConfirm"
+                    style="@style/Sis.EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:hint="Re-enter password"
+                    android:importantForAutofill="no"
+                    android:inputType="textPassword"
+                    android:paddingEnd="64dp" />
+
+                <ImageButton
+                    android:id="@+id/btnToggleConfirm"
+                    style="@style/Sis.Tile"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginEnd="7dp"
+                    android:background="@drawable/bg_eye"
+                    android:contentDescription="Show or hide password"
+                    android:elevation="3dp"
+                    android:src="@drawable/ic_eye_off"
+                    app:tint="@color/text_gray" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/errConfirm"
+                style="@style/Sis.Error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/Sis.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                style="@style/Sis.CardTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="About you" />
+
+            <TextView
+                style="@style/Sis.FieldLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Student number" />
+
+            <EditText
+                android:id="@+id/etStudentNumber"
+                style="@style/Sis.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:hint="e.g. 2023-01324"
+                android:importantForAutofill="no"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/errStudentNumber"
+                style="@style/Sis.Error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                style="@style/Sis.FieldLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Last name" />
+
+            <EditText
+                android:id="@+id/etLastName"
+                style="@style/Sis.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:hint="Dela Cruz"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName|textCapWords" />
+
+            <TextView
+                android:id="@+id/errLastName"
+                style="@style/Sis.Error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/Sis.FieldLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="First name" />
+
+                    <EditText
+                        android:id="@+id/etFirstName"
+                        style="@style/Sis.EditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:hint="Juan"
+                        android:importantForAutofill="no"
+                        android:inputType="textPersonName|textCapWords" />
+
+                    <TextView
+                        android:id="@+id/errFirstName"
+                        style="@style/Sis.Error"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/Sis.FieldLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Middle name" />
+
+                    <EditText
+                        android:id="@+id/etMiddleName"
+                        style="@style/Sis.EditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:hint="Optional"
+                        android:importantForAutofill="no"
+                        android:inputType="textPersonName|textCapWords" />
+
+                    <TextView
+                        android:id="@+id/errMiddleName"
+                        style="@style/Sis.Error"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/Sis.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                style="@style/Sis.CardTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your program" />
+
+            <TextView
+                style="@style/Sis.FieldLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Program" />
+
+            <EditText
+                android:id="@+id/etProgram"
+                style="@style/Sis.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:hint="e.g. BS Computer Science"
+                android:importantForAutofill="no"
+                android:inputType="textCapWords" />
+
+            <TextView
+                android:id="@+id/errProgram"
+                style="@style/Sis.Error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                style="@style/Sis.FieldLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Specialization (optional)" />
+
+            <EditText
+                android:id="@+id/etSpecialization"
+                style="@style/Sis.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:hint="e.g. Digital Forensics"
+                android:importantForAutofill="no"
+                android:inputType="textCapWords" />
+
+            <TextView
+                android:id="@+id/errSpecialization"
+                style="@style/Sis.Error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                style="@style/Sis.FieldLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Year level" />
+
+            <RadioGroup
+                android:id="@+id/rgYearLevel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_segment_group"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/rbYear1"
+                    style="@style/Sis.Segment"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:text="1st" />
+
+                <RadioButton
+                    android:id="@+id/rbYear2"
+                    style="@style/Sis.Segment"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:text="2nd" />
+
+                <RadioButton
+                    android:id="@+id/rbYear3"
+                    style="@style/Sis.Segment"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:text="3rd" />
+
+                <RadioButton
+                    android:id="@+id/rbYear4"
+                    style="@style/Sis.Segment"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:text="4th" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnRegister"
+            style="@style/Sis.PrimaryButton"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginTop="28dp"
+            android:text="Register" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Already have an account? "
+                android:textColor="@color/text_dark"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tvLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:text="Log in"
+                android:textColor="@color/accent"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

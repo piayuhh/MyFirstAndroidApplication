@@ -1,0 +1,115 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.MyFirstAndroidApplication" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/accent</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSurface">@color/card</item>
+        <item name="colorControlActivated">@color/accent</item>
+        <item name="android:windowBackground">@drawable/bg_screen</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <!-- Raised card (soft blue-gray shadow) -->
+    <style name="Sis.Card" parent="">
+        <item name="android:background">@drawable/bg_card</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:padding">24dp</item>
+        <item name="android:elevation">10dp</item>
+        <item name="android:outlineAmbientShadowColor" tools:targetApi="p">@color/shadow_blue</item>
+        <item name="android:outlineSpotShadowColor" tools:targetApi="p">@color/shadow_blue</item>
+    </style>
+
+    <!-- Small raised square (logo, back button, eye button) -->
+    <style name="Sis.Tile" parent="">
+        <item name="android:elevation">6dp</item>
+        <item name="android:outlineAmbientShadowColor" tools:targetApi="p">@color/shadow_blue</item>
+        <item name="android:outlineSpotShadowColor" tools:targetApi="p">@color/shadow_blue</item>
+    </style>
+
+    <!-- Big title -->
+    <style name="Sis.Title" parent="">
+        <item name="android:textSize">34sp</item>
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:textColor">@color/text_dark</item>
+        <item name="android:letterSpacing">-0.04</item>
+    </style>
+
+    <style name="Sis.Subtitle" parent="">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/text_gray</item>
+    </style>
+
+    <style name="Sis.CardTitle" parent="">
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:textColor">@color/text_dark</item>
+        <item name="android:letterSpacing">-0.02</item>
+    </style>
+
+    <!-- Label above each box -->
+    <style name="Sis.FieldLabel" parent="">
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">@color/text_dark</item>
+    </style>
+
+    <!-- Inset (pressed-in) text box -->
+    <style name="Sis.EditText" parent="">
+        <item name="android:background">@drawable/bg_input</item>
+        <item name="android:paddingStart">18dp</item>
+        <item name="android:paddingEnd">18dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/text_dark</item>
+        <item name="android:textColorHint">@color/hint_gray</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <!-- Red error text under a box -->
+    <style name="Sis.Error" parent="">
+        <item name="android:layout_marginTop">6dp</item>
+        <item name="android:layout_marginStart">4dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/error_red</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <!-- Dashboard label / value -->
+    <style name="Sis.Label" parent="">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/text_gray</item>
+    </style>
+
+    <style name="Sis.Value" parent="">
+        <item name="android:layout_marginTop">3dp</item>
+        <item name="android:layout_marginBottom">18dp</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">@color/text_dark</item>
+    </style>
+
+    <!-- Orange gradient button -->
+    <style name="Sis.PrimaryButton" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:background">@drawable/bg_button_primary</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:elevation">10dp</item>
+        <item name="android:outlineAmbientShadowColor" tools:targetApi="p">@color/accent</item>
+        <item name="android:outlineSpotShadowColor" tools:targetApi="p">@color/accent</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!-- Year level segment -->
+    <style name="Sis.Segment" parent="">
+        <item name="android:button">@null</item>
+        <item name="android:background">@drawable/bg_segment_item</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/segment_text</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>
